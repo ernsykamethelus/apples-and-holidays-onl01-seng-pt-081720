@@ -41,18 +41,14 @@ end
 
 
 def all_holidays_with_bbq(holiday_hash)
-holidays_with_BBQ = []
-  holiday_supplies.collect do |season, holidays|
+results = []
 
-    holidays.collect do |holiday, supplies|
-      if supplies.include?("BBQ")
-         holidays_with_BBQ << holiday 
-      end
-    end
 
-  end
-  holidays_with_BBQ.uniq
-end
+  holiday_hash.collect{ |season, holidays|
+    holidays.select{ |holiday, supplies|
+      supplies.include?("BBQ")
+    }.keys
+  }.flatten
 
 
 
