@@ -42,18 +42,18 @@ end
 
 
 def all_holidays_with_bbq(holiday_hash)
-answer = []
-holiday_hash.each do |season, data|
-  data.each do |holiday, value|
-    value.each do |supply|
-     if supply == "BBQ"
-        answer.push(holiday)
+holidays_with_BBQ = []
+  holiday_supplies.collect do |season, holidays|
+
+    holidays.collect do |holiday, supplies|
+      if supplies.include?("BBQ")
+         holidays_with_BBQ << holiday 
       end
     end
+
   end
-end
-answer
-end
+  holidays_with_BBQ.uniq
+end	end
 
 
 
