@@ -23,17 +23,7 @@ def add_supply_to_winter_holidays(holiday_hash, supply)
  
  
  def all_winter_holiday_supplies(holiday_hash)
-holiday_supplies.each do |season, holidays|
-    seasons = season.to_s
-    puts "#{seasons.capitalize!}:"
-    holidays.each do |holiday, supplies|
-      split_holiday = holiday.to_s.split("_").collect do |word|
-        words = word.capitalize!
-      end.join(" ")
-
-      puts "  #{split_holiday}: #{supplies.join(", ")}" 
-    end 
-  end
+holiday_hash[:winter].values.flatten
 end
 
 
