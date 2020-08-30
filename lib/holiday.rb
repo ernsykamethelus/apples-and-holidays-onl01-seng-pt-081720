@@ -35,7 +35,6 @@ holiday_supplies.each do |season, holidays|
     end 
   end
 end
-end
 
 
 
