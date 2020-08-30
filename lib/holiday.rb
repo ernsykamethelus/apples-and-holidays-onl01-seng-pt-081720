@@ -34,6 +34,8 @@ holiday_supplies.each do |season, holidays|
       puts "  #{split_holiday}: #{supplies.join(", ")}" 
     end 
   end
+end
+end
 
 
 
